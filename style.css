@@ -1,0 +1,35 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+body > *{
+    padding: 12px;
+    background-color: #fafafa;
+        color: #0e0e0e;
+}
+
+#img-mediatheque {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  height: 256px;
+  grid-area: img-mediatheque;
+}
+
+#p-quand{
+    margin-left: 12px;
+    grid-area: p-quand;
+}
+#title-quand{grid-area: title-quand;}
+#quand{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "title-quand title-quand"
+        "img-mediatheque p-quand";
+}
+
+footer{
+    background-color: #e0e0e0;
+}
