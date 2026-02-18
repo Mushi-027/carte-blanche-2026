@@ -1,3 +1,15 @@
+/*Ajout de la police Inter Tight
+// <weight>: Use a value from 100 to 900
+// <uniquifier>: Use a unique and descriptive class name
+
+.inter-tight-<uniquifier> {
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+}*/
+
 html, body{
     margin: 0;
     height: 100%;
@@ -6,6 +18,7 @@ body > *{
     padding: 12px;
     background-color: #fafafa;
         color: #0e0e0e;
+    font-family: "Inter Tight", sans-serif;
 }
 
 /*déclaration grid*/
