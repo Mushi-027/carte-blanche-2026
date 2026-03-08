@@ -21,10 +21,56 @@ body > *{
     font-family: "Inter Tight", sans-serif;
 }
 
-/*déclaration grid*/
+/*Copié-collé depuis internet*/
+.skip-link{
+    /* Positionné en haut à gauche */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  
+  /* Style du lien */
+  padding: 1rem 1.5rem;
+  background: #6B64FF;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  
+  /* Masqué hors écran avec transform */
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+.skip-link:focus{
+  /* Visible quand focus */
+  transform: translateY(0);
+  
+  /* Indicateur de focus visible */
+  outline: 3px solid #0e0e0e;
+  outline-offset: 2px;
+}
+
+
+a{
+    text-decoration: none;
+    color: #0e0e0e;
+}
+a:hover{
+    color: #6B64FF;
+    text-decoration: underline;
+}
+
+
+#title{
+    background-image: url(/images/Affiche_Carte-Blanche_v2.1-qlt_50.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+/*déclaration grid*//*
 p{grid-area: p;}
 img{grid-area: img;}
-h2{grid-area: h2;}
+h2{grid-area: h2;}*/
 
 /*cquoi*/
 #img-cquoi{
@@ -34,7 +80,7 @@ h2{grid-area: h2;}
 #div-p-cquoi{
     margin-right: 100px;
     grid-area: div-p-cquoi;
-}
+}/*
 #cquoi{
     display: grid;
     grid-template-columns: auto auto;
@@ -42,7 +88,7 @@ h2{grid-area: h2;}
     grid-template-areas: 
         "h2 h2"
         "img div-p-cquoi";
-}
+}*/
 
 /*quand*/
 #img-mediatheque {
@@ -54,14 +100,15 @@ h2{grid-area: h2;}
 #p-quand{
     margin-left: 12px;
 }
-#quand{ /*grid*/
+/*
+#quand{
     display: grid;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
     grid-template-areas: 
         "h2 h2"
         "img p";
-}
+}*/
 
 /*footer*/
 footer{
