@@ -1,25 +1,105 @@
-/*Ajout de la police Inter Tight
-// <weight>: Use a value from 100 to 900
-// <uniquifier>: Use a unique and descriptive class name
+/********Variables********/
 
-.inter-tight-<uniquifier> {
-  font-family: "Inter Tight", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+:root {
+    --violet: #6B64FF;
+    --dark-bg: #1e1e24;
+    --light-bg: #fafafa;
+    --text-main: #0e0e0e;
 }
-}*/
 
-html, body{
+
+/********CSS elements********/
+
+html, body {
     margin: 0;
+    padding: 0;
     height: 100%;
-}
-body > *{
-    padding: 12px;
-    background-color: #fafafa;
-        color: #0e0e0e;
+    background-color: var(--light-bg);
+    color: var(--text-main);
     font-family: "Inter Tight", sans-serif;
+    line-height: 1.6;
 }
+
+header {
+    background: var(--dark-bg);
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--violet);
+}
+
+header h1 {
+    color: var(--violet);
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.html-element {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: var(--violet);
+    border-bottom: 2px solid var(--light-bg);
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: var(--text-main);
+    background: #e0e0e0;
+}
+
+a{
+    color: var(--text-main);
+}
+a:hover{
+    color: var(--violet);
+    text-decoration: underline;
+}
+
+#img-cquoi{
+    width: 40%;
+    margin-left: 25%;
+}
+
+#img-mediatheque {
+    border-radius: 10px;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-left: auto ;
+    margin-right: auto;
+    max-width: 256px;
+}
+
+
+/********Grid********/
+
+.css-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.musicien {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+
+/********Skip-links********/
 
 /*Copié-collé depuis internet*/
 .skip-link{
@@ -31,7 +111,7 @@ body > *{
   
   /* Style du lien */
   padding: 1rem 1.5rem;
-  background: #6B64FF;
+  background: var(--violet);
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -45,72 +125,9 @@ body > *{
   transform: translateY(0);
   
   /* Indicateur de focus visible */
-  outline: 3px solid #0e0e0e;
+  outline: 3px solid var(--text-main);
   outline-offset: 2px;
 }
 
 
-a{
-    text-decoration: none;
-    color: #0e0e0e;
-}
-a:hover{
-    color: #6B64FF;
-    text-decoration: underline;
-}
-
-
-#title{
-    background-image: url(/images/Affiche_Carte-Blanche_v2.1-qlt_50.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    
-}
-
-/*déclaration grid*//*
-p{grid-area: p;}
-img{grid-area: img;}
-h2{grid-area: h2;}*/
-
-/*cquoi*/
-#img-cquoi{
-    width: 40%;
-    margin-left: 100px;
-}
-#div-p-cquoi{
-    margin-right: 100px;
-    grid-area: div-p-cquoi;
-}/*
-#cquoi{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        "h2 h2"
-        "img div-p-cquoi";
-}*/
-
-/*quand*/
-#img-mediatheque {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  height: 256px;
-}
-#p-quand{
-    margin-left: 12px;
-}
-/*
-#quand{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        "h2 h2"
-        "img p";
-}*/
-
-/*footer*/
-footer{
-    background-color: #e0e0e0;
-}
+/********Mode clair/sombre********/
