@@ -12,19 +12,20 @@
 <body>
     <header>
         <nav>
-            <a href="#cquoi">C'est quoi ?</a>
-            <a href="#qui">Qui ?</a>
-            <a href="#quoi">Quoi ?</a>
-            <a href="#quand">Quand ?</a>
+            <a class="skip-link" href="#cquoi">C'est quoi ?</a>
+            <a class="skip-link" href="#qui">Qui ?</a>
+            <a class="skip-link" href="#quoi">Quoi ?</a>
+            <a class="skip-link" href="#quand">Quand ?</a>
         </nav>
+        
+        <div>
+            <h1>Carte Blanche 2026</h1>
+        </div>
     </header>
 
     <main>
-        <div class="title">
-            <h1>Carte Blanche 2026</h1>
-        </div>
 
-        <div id="cquoi">
+        <div class="html-element" id="cquoi">
             <h2>C'est quoi ?</h2>
             <!--<img id="img-cquoi" src="images/undraw_off-road_34hg.svg" alt="Illustration de personnes faisant de la guitare">-->
             <div id="div-p-cquoi">
@@ -39,32 +40,34 @@
             </div> 
         </div>
 
-        <div id="qui">
+        <div class="html-element" id="qui">
             <h2>Qui ?</h2>
-            <div class="musicien">
-                <b>Agathe :</b> Piano, Basse électrique
-            </div>
-            <div class="musicien">
-                <b>Ambre :</b> Flûte traversière
-            </div>
-            <div class="musicien">
-                <b>Arthur :</b> Piano
-            </div>
-            <div class="musicien">
-                <b>Aminta :</b> Trombone
-            </div>
-            <div class="musicien">
-                <b>Capucine :</b> Basson, guitare (?)
-            </div>
-            <div class="musicien">
-                <b>Coline :</b> Trombone
-            </div>
-            <div class="musicien">
-                <b>Noah :</b> Saxophone, Contrebasse
-            </div>
+            <div class="css-grid">
+                <div class="musicien">
+                    <b>Agathe :</b> Piano, Basse électrique
+                </div>
+                <div class="musicien">
+                    <b>Ambre :</b> Flûte traversière
+                </div>
+                <div class="musicien">
+                    <b>Arthur :</b> Piano
+                </div>
+                <div class="musicien">
+                    <b>Aminta :</b> Trombone
+                </div>
+                <div class="musicien">
+                    <b>Capucine :</b> Basson, guitare (?)
+                </div>
+                <div class="musicien">
+                    <b>Coline :</b> Trombone
+                </div>
+                <div class="musicien">
+                    <b>Noah :</b> Saxophone, Contrebasse
+                </div>
+            </div>            
         </div>
 
-        <div id="quoi">
+        <div class="html-element" id="quoi">
             <h2>Quoi ?</h2>
             <p>
                 <b>Agathe :</b> L'art peut être un moyen de dénoncer des causes et transmettre des messages de manière plus percutante et plus forte que les mots. 
@@ -91,14 +94,15 @@
             </p>
         </div>
 
-        <div id="quand">
+        <div class="html-element" id="quand">
             <h2>Quand ?</h2>
-            <img id="img-mediatheque" src="images/mediatheque-meyzieu.jpg" alt="Photographie de la édiathèque de Meyzieu">
-            <p>
-                Jeudi 2 avril 2026, 19H<br>
-                Mediathèque de Meyzieu ; 27 Rue Louis Saulnier, Meyzieu, 69330
-            </p>
-            <div class="mapouter"><div class="osm_canvas"><iframe width="625" height="375" id="osm_canvas"  src="about:blank" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><script>document.getElementById('osm_canvas').contentDocument.write('<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.css" />');document.getElementById('osm_canvas').contentDocument.write('<script src = "https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.min.js"><\/script>');document.getElementById('osm_canvas').contentDocument.write('<div id ="osm-map" style = "width:625px; height:375px;"></div>');document.getElementById('osm_canvas').contentDocument.write('<script>var mapOptions={center:[45.7651067, 5.0031711],zoom:16,attributionControl: true}; var map = new L.map("osm-map", mapOptions); map.attributionControl.setPrefix(\'&copy; <a target="_blank" href="https://www.openstreetmap.org/copyright" rel="nofollow noopener noreferrer">OpenStreetMap</a>\'); var layer = new L.TileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");map.addLayer(layer);let marker = new L.Marker([45.7651067, 5.0031711]);marker.addTo(map).bindPopup(\'27, Rue Louis Saulnier\'); marker.on(\'mouseover\',function(ev) {marker.openPopup();});<\/script>');document.getElementById('osm_canvas').contentDocument.close();</script><a href="https://online-timer.me/">online timer</a><br><a href="https://www.alltopplaces.com"></a><br><style>.mapouter{position: relative;text-align: right;height: 375px;width: 625px;}</style><a href="https://www.embedmaps.co/openstreetmap">generate openstreetmap</a><style>.osm_canvas{overflow: hidden;background: none !important;height: 375px;width: 625px;}</style></div></div>
+            <div class="css-grid">
+                <p>
+                    Rendez-vous le <strong>Jeudi 2 avril</strong> à <strong>19h</strong>,
+                    à la <strong>Médiathèque de Meyzieu</strong> (<i>27 Rue Louis Saulnier, Meyzieu, 69330</i>) ! 
+                </p>
+                <img id="img-mediatheque" src="images/mediatheque-meyzieu.jpg" alt="Photographie de la édiathèque de Meyzieu">
+            </div>
         </div>
 
     </main>

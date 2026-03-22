@@ -1,69 +1,178 @@
-/*Ajout de la police Inter Tight
-// <weight>: Use a value from 100 to 900
-// <uniquifier>: Use a unique and descriptive class name
+/********Variables********/
 
-.inter-tight-<uniquifier> {
-  font-family: "Inter Tight", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+:root {
+    --violet: #6B64FF;
+    --dark-bg: #1e1e24;
+    --light-bg: #fafafa;
+    --dark-text-main: #0e0e0e;
+    --light-text-main: #f1f1f1;
 }
-}*/
 
-html, body{
+
+/********CSS elements********/
+
+html, body {
     margin: 0;
+    padding: 0;
     height: 100%;
-}
-body > *{
-    padding: 12px;
-    background-color: #fafafa;
-        color: #0e0e0e;
     font-family: "Inter Tight", sans-serif;
+    line-height: 1.6;
 }
 
-/*déclaration grid*/
-p{grid-area: p;}
-img{grid-area: img;}
-h2{grid-area: h2;}
+header {
+    padding: 3rem 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--violet);
+}
 
-/*cquoi*/
+header h1 {
+    color: var(--violet);
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.html-element {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+h2 {
+    color: var(--violet);
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+a:hover{
+    color: var(--violet);
+}
+
 #img-cquoi{
     width: 40%;
-    margin-left: 100px;
-}
-#div-p-cquoi{
-    margin-right: 100px;
-    grid-area: div-p-cquoi;
-}
-#cquoi{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        "h2 h2"
-        "img div-p-cquoi";
+    margin-left: 25%;
 }
 
-/*quand*/
 #img-mediatheque {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  height: 256px;
-}
-#p-quand{
-    margin-left: 12px;
-}
-#quand{ /*grid*/
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-        "h2 h2"
-        "img p";
+    border-radius: 10px;
+    border: 1px solid #eee;
+    padding: 5px;
+    margin-left: auto ;
+    margin-right: auto;
+    max-width: 75%;
 }
 
-/*footer*/
-footer{
-    background-color: #e0e0e0;
+
+/********Grid********/
+
+.css-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.musicien {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s ease;
+}
+
+
+/********Skip-links********/
+
+/*Copié-collé depuis internet*/
+.skip-link{
+    /* Positionné en haut à gauche */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  
+  /* Style du lien */
+  padding: 1rem 1.5rem;
+  background: var(--violet); /****************/
+  color: white; /****************/
+  font-weight: bold;
+  text-decoration: none;
+  
+  /* Masqué hors écran avec transform */
+  transform: translateY(-100%);
+  transition: transform 0.2s ease-in-out;
+}
+.skip-link:focus{
+  /* Visible quand focus */
+  transform: translateY(0);
+  
+  /* Indicateur de focus visible */
+  outline: 3px solid var(--dark-text-main); /****************/
+  outline-offset: 2px;
+}
+
+
+/********Mode clair/sombre********/
+
+/*Reactive Dark Mode*/
+@media (prefers-color-scheme: dark){
+    html, body{
+        background-color: var(--dark-bg);
+        color: var(--light-text-main)
+    }
+    header{
+        background-color: var(--dark-bg);
+        color: var(--light-text-main);
+    }
+    .html-element{
+        background-color: black;
+        box-shadow: 0 4px 10px rgba(255,255,255,0.05); /****************/
+    }
+    h2{
+        border-bottom: 2px solid var(--dark-bg);
+    }
+    footer{
+        color: var(--light-text-main);
+        background: black;
+    }
+    a{
+        color: var(--light-text-main);
+    }
+    .musicien{
+        background: var(--dark-bg);
+    }
+}
+
+/*Reactive Light Mode*/
+@media (prefers-color-scheme: light){
+    html, body{
+        background-color: var(--light-bg);
+        color: var(--dark-text-main);
+    }
+    header{
+        background-color: var(--dark-bg);
+        color: var(--light-text-main);
+    }
+    .html-element{
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h2{
+        border-bottom: 2px solid var(--light-bg);
+    }
+    footer{
+        color: var(--dark-text-main);
+        background: #e0e0e0;
+    }
+    a{
+        color: var(--dark-text-main);
+    }
+    .musicien{
+        background: var(--light-bg);
+    }
 }
