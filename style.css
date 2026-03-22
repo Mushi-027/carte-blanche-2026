@@ -4,7 +4,8 @@
     --violet: #6B64FF;
     --dark-bg: #1e1e24;
     --light-bg: #fafafa;
-    --text-main: #0e0e0e;
+    --dark-text-main: #0e0e0e;
+    --light-text-main: #f1f1f1;
 }
 
 
@@ -14,15 +15,11 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: var(--light-bg);
-    color: var(--text-main);
     font-family: "Inter Tight", sans-serif;
     line-height: 1.6;
 }
 
 header {
-    background: var(--dark-bg);
-    color: white;
     padding: 3rem 2rem;
     text-align: center;
     border-bottom: 5px solid var(--violet);
@@ -38,14 +35,11 @@ header h1 {
     max-width: 900px;
     margin: 2rem auto;
     padding: 1.5rem;
-    background: white;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 h2 {
     color: var(--violet);
-    border-bottom: 2px solid var(--light-bg);
     padding-bottom: 10px;
 }
 
@@ -53,16 +47,10 @@ footer {
     text-align: center;
     padding: 20px;
     font-weight: bold;
-    color: var(--text-main);
-    background: #e0e0e0;
 }
 
-a{
-    color: var(--text-main);
-}
 a:hover{
     color: var(--violet);
-    text-decoration: underline;
 }
 
 #img-cquoi{
@@ -76,7 +64,7 @@ a:hover{
     padding: 5px;
     margin-left: auto ;
     margin-right: auto;
-    max-width: 256px;
+    max-width: 75%;
 }
 
 
@@ -90,7 +78,6 @@ a:hover{
 }
 
 .musicien {
-    background: var(--light-bg);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -111,8 +98,8 @@ a:hover{
   
   /* Style du lien */
   padding: 1rem 1.5rem;
-  background: var(--violet);
-  color: white;
+  background: var(--violet); /****************/
+  color: white; /****************/
   font-weight: bold;
   text-decoration: none;
   
@@ -125,9 +112,67 @@ a:hover{
   transform: translateY(0);
   
   /* Indicateur de focus visible */
-  outline: 3px solid var(--text-main);
+  outline: 3px solid var(--dark-text-main); /****************/
   outline-offset: 2px;
 }
 
 
 /********Mode clair/sombre********/
+
+/*Reactive Dark Mode*/
+@media (prefers-color-scheme: dark){
+    html, body{
+        background-color: var(--dark-bg);
+        color: var(--light-text-main)
+    }
+    header{
+        background-color: var(--dark-bg);
+        color: var(--light-text-main);
+    }
+    .html-element{
+        background-color: black;
+        box-shadow: 0 4px 10px rgba(255,255,255,0.05); /****************/
+    }
+    h2{
+        border-bottom: 2px solid var(--dark-bg);
+    }
+    footer{
+        color: var(--light-text-main);
+        background: black;
+    }
+    a{
+        color: var(--light-text-main);
+    }
+    .musicien{
+        background: var(--dark-bg);
+    }
+}
+
+/*Reactive Light Mode*/
+@media (prefers-color-scheme: light){
+    html, body{
+        background-color: var(--light-bg);
+        color: var(--dark-text-main);
+    }
+    header{
+        background-color: var(--dark-bg);
+        color: var(--light-text-main);
+    }
+    .html-element{
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h2{
+        border-bottom: 2px solid var(--light-bg);
+    }
+    footer{
+        color: var(--dark-text-main);
+        background: #e0e0e0;
+    }
+    a{
+        color: var(--dark-text-main);
+    }
+    .musicien{
+        background: var(--light-bg);
+    }
+}
